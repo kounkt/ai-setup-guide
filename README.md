@@ -1,8 +1,50 @@
-v2・2026-10-10
-
 # AI に制作を頼む前の、Mac の整え方
 
-株式会社CHIERO　無料ガイド　v2
+Claude Code か Codex に動画・LP・文章の制作を頼む前に、Mac に必要な道具が入っているかを一覧にする環境チェック（`check_env.sh`）と、足りない物を AI に入れてもらう手順のガイドです。
+無料です。株式会社CHIERO　無料ガイド　v2（2026-10-10）
+
+## 何ができるか
+
+- `check_env.sh` を1回実行すると、Mac の状態と道具の有無が一覧になります。主に見る物は、CPU の種類、macOS の版、メモリ、空き容量、Homebrew、ffmpeg、git、Node.js、Python、playwright と Chromium、Claude Code / Codex です。
+- 各行に `[OK]`・`[足りない]`・`[要確認]`・`[参考]` が付き、最後に件数のまとめが出ます。
+- このスクリプトがするのは、版の表示と一覧の表示だけです。ファイルを作る命令と、通信をする命令は入れていません。
+- 足りない物は、ガイドの依頼文を AI に貼って入れてもらいます。パスワードの入力と、設定ファイルの変更の許可は、自分で行います。
+
+対象は Apple Silicon（M1 以降）の Mac です。
+
+## 30秒で試す
+
+```sh
+git clone https://github.com/kounkt/ai-setup-guide
+cd ai-setup-guide
+zsh check_env.sh
+```
+
+出力をそのまま Claude Code か Codex に貼って、「足りない物を入れて。パスワードは私が入力する」と頼むと、続きの作業に進めます。
+依頼文の全文は、下の「③ 道具の入れ方」にあります。
+
+## 実例
+
+筆者の Mac で実行した出力です（実物の出力を、表示を整えて撮影）。
+
+![check_env.sh の出力。OK が 14 件、足りないが 0 件、要確認が 2 件](docs/check-env-output.png)
+
+## 道具がそろった後に使える物
+
+- preflight-reviewer（無料・MIT）：AI が作った物を、作ったセッションとは別のセッションで、出す前に点検するスキルです。
+  https://github.com/kounkt/preflight-reviewer
+- AI社員一式（note・有料）：18の担当に仕事を分けた会社の運用一式です。役割のファイル、手順36本、全社の決まり6本、朝の報告の型が入った104ファイルで、一式の置き場の確認が付いた、同じ系統の環境チェックも入っています。
+  https://note.com/kounkt/n/nf6640ae56f4e
+- 担当ごとの一覧と、成果物のサンプル：https://chiero.jp/skills/
+
+## 読み物
+
+- [Codex と Claude Code を同じフォルダで使う入口（AGENTS.md と CLAUDE.md）](docs/agents-md-claude-md.md)
+- [M1・メモリ8GBの MacBook Air で強制再起動した記録と、足した決まり](docs/one-heavy-job-at-a-time.md)
+
+---
+
+# ガイド本文
 
 ## ① この手順でできるようになること
 
