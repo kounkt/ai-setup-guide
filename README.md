@@ -39,6 +39,7 @@ zsh check_env.sh
 
 ## 読み物
 
+- [Claude Code で AI社員18人の会社を運営する：フォルダ構成と決まり](docs/ai-team-folder-and-rules.md)
 - [Codex と Claude Code を同じフォルダで使う入口（AGENTS.md と CLAUDE.md）](docs/agents-md-claude-md.md)
 - [M1・メモリ8GBの MacBook Air で強制再起動した記録と、足した決まり](docs/one-heavy-job-at-a-time.md)
 
